@@ -5,18 +5,12 @@ define('EUR_CZK', 25);
 define('USD_CZK', 21);
 define('RUB_CZK', 0.3);
 define('GBP_CZK', 29);
-
 define('USD_EUR', 25);
 define('RUB_EUR', 0.3);
 define('GBP_EUR', 29);
-
 define('RUB_GBP', 25);
 define('USD_GBP', 21);
-
-
 define('USD_RUB', 0.3);
-
-
 $sub = filter_input(INPUT_POST, 'odeslat');
 $switch =  filter_input(INPUT_POST, 'switch');
 $convertfrom;
@@ -55,7 +49,6 @@ if (isset($sub)) {
                     $convertfrom = " RUB " ;
                     $convertto = " CZK " ;
                     break;
-
     case 'eur_czk': 
             $finalamount = $amount * EUR_CZK ;
             $convertfrom = " EUR " ;
@@ -76,9 +69,6 @@ if (isset($sub)) {
             $convertfrom = " EUR " ;
             $convertto = " GBP " ;
             break;
-     
-    
-    
     case 'usd_czk': 
             $finalamount = $amount * USD_CZK ;
             $convertfrom = " USD " ;
@@ -100,9 +90,6 @@ if (isset($sub)) {
             $convertfrom = " USD " ;
             $convertto = " GBP " ;
             break;
-    
-     
-    
     case 'rub_czk': 
             $finalamount = $amount * RUB_CZK ;
             $convertfrom = " USD " ;
@@ -123,8 +110,6 @@ if (isset($sub)) {
             $convertfrom = " USD " ;
             $convertto = " GBP " ;
             break;
-    
-    
     case 'gbp_czk': 
             $finalamount = $amount * GBP_CZK ;
             $convertfrom = " USD " ;
@@ -145,10 +130,7 @@ if (isset($sub)) {
             $convertfrom = " USD " ;
             $convertto = " GBP " ;
             break;   
-
-  
                          }
-
 
 $all =$text . $amount . $convertfrom . " = " . $final . $convertto ?>
 <?= $all ?>
@@ -157,7 +139,7 @@ $all =$text . $amount . $convertfrom . " = " . $final . $convertto ?>
 <form action="index.php" method="post">
 <br>
 <h1>Převod</h1> <br> 
-<label for="castka">Choose a car:</label>
+<label for="castka">Vyber:</label>
 <select name="castka" id="castka">
   <option value="czk_eur"> Koruny na Eura</option>
   <option value="eur_czk">Eura na Koruny</option>
